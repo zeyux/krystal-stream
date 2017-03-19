@@ -34,6 +34,134 @@ ul{
   margin-bottom:10px;
 }
 
+/*  Columns  */
+
+.col {
+  float: left;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.col.four {
+  width: 23%;
+  margin: 0 1%;
+}
+
+.col.three {
+  width: 31.3%;
+  margin: 0 1%;
+}
+
+.col.two {
+  width: 40%;
+  margin: 0 2.5%;
+  padding: 0 2.5%;
+}
+
+.col.extrapad {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.col .service,
+.col .feature {
+  font-size: 21px;
+  font-weight: 300;
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+.col .service:after {
+  content: "";
+  width: 50px;
+  position: relative;
+  border-bottom: 1px solid #eee;
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.col .feature {
+  font-size: 19px;
+}
+
+.col h1.side,
+.col p.side,
+.col span.side:first-of-type {
+  margin-left: 50px;
+  text-align: left;
+}
+
+.col .icon {
+  border-radius: 50%;
+  height: 85px;
+  width: 85px;
+  line-height: 85px;
+  text-align: center;
+  margin: 0 auto;
+  transition: background 0.25s linear, color 0.25s linear;
+}
+
+.col .icon.side {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: -15px;
+  height: 50px;
+  width: 50px;
+}
+
+.col:hover > .icon {
+  background: #00A7E1;
+  color: white;
+}
+
+.col:hover > .icon.side {
+  background: initial;
+  color: initial;
+}
+
+.responsivegroup {
+  display: none;
+}
+
+/*  Column specifics */
+
+.col p,
+.col h1 {
+  padding: 0 1%;
+  text-align: center;
+}
+
+.group.margin {
+  margin-bottom: 20px;
+}
+
+.imgholder {
+  height: 475px;
+  width: 100%;
+  background: #333;
+  opacity: 0.9;
+  transition: background 0.3s linear;
+}
+
+.col.bg {
+  background: #FFF;
+}
+
+.col.pointer {
+  cursor: pointer;
+}
+
+.col.bg:hover .imgholder {
+  background: #00A7E1;
+}
+
+.col span.feature {
+  font-size: 20px;
+}
+
 /* Header **/
 header{
   background:#00171F;
@@ -135,6 +263,23 @@ header a:hover{
   width:90px;
 }
 
+
+/* fiches */
+#fiches a{
+    color: #003459;
+    text-decoration: none;
+}
+
+#fiches a:hover{
+  color: #00A7E1;
+  font-weight: bold;
+}
+#fiches a:after{
+  color: #003459;
+  font-weight: normal;
+}
+
+
 /* Sidebar */
 aside#sidebar{
   float:right;
@@ -147,6 +292,9 @@ aside#sidebar .quote input, aside#sidebar .quote textarea{
   padding:5px;
 }
 
+#Members h1{
+  color: white;
+}
 /* Main-col */
 article#main-col{
   float:left;
@@ -183,7 +331,8 @@ footer{
   #newsletter form,
   #boxes .box,
   article#main-col,
-  aside#sidebar{
+  aside#sidebar,
+  #fiches{
     float:none;
     text-align:center;
     width:100%;
@@ -191,6 +340,21 @@ footer{
 
   header{
     padding-bottom:20px;
+  }
+
+  .container {
+    width: 95%;
+  }
+  .col.four {
+    width: 48%;
+    margin: 1%;
+  }
+  .col.three {
+    display: block;
+    width: 95%;
+    padding: 0;
+    margin: 0 auto;
+    float: none;
   }
 
   #showcase h1{
